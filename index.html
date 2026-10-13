@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -6,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#d71920">
 <title>Иприс Копицентр — Пионерская</title>
+
 <style>
 :root {
   --red: #d71920;
@@ -16,18 +16,24 @@
   --amber: #a66b00;
   --gray: #c62828;
 }
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: Arial, sans-serif;
 }
+
 header {
   background: var(--red);
   color: white;
   padding: 22px 16px;
 }
+
 .brand {
   max-width: 560px;
   margin: auto;
@@ -36,6 +42,7 @@ header {
   justify-content: center;
   gap: 14px;
 }
+
 .logo {
   width: 60px;
   height: 60px;
@@ -45,7 +52,12 @@ header {
   border-radius: 50%;
   background: white;
 }
-.logo svg { width: 43px; height: 43px; }
+
+.logo svg {
+  width: 43px;
+  height: 43px;
+}
+
 .brand-name {
   margin: 0;
   font-size: clamp(19px, 4vw, 28px);
@@ -54,20 +66,39 @@ header {
   text-transform: uppercase;
   letter-spacing: -.5px;
 }
+
 .branch {
   margin: 7px 0 0;
   font-size: 14px;
   font-weight: 600;
 }
+
 main {
   max-width: 520px;
   width: calc(100% - 28px);
   margin: 28px auto 40px;
 }
-.intro { text-align: center; margin-bottom: 20px; }
-.intro h2 { margin: 0; font-size: 22px; }
-.intro p { color: var(--muted); font-size: 14px; }
-.contacts { display: grid; gap: 12px; }
+
+.intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contacts {
+  display: grid;
+  gap: 12px;
+}
+
 .contact {
   display: flex;
   align-items: center;
@@ -84,7 +115,12 @@ main {
   text-align: left;
   width: 100%;
 }
-a.contact:hover, button.contact:hover { border-color: #ed9a9d; }
+
+a.contact:hover,
+button.contact:hover {
+  border-color: #ed9a9d;
+}
+
 .contact-icon {
   width: 44px;
   height: 44px;
@@ -95,9 +131,23 @@ a.contact:hover, button.contact:hover { border-color: #ed9a9d; }
   display: grid;
   place-items: center;
 }
-.contact-icon svg { width: 24px; height: 24px; }
-.contact-copy { flex: 1; min-width: 0; }
-.contact-title { display: block; font-weight: 750; font-size: 15px; }
+
+.contact-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-title {
+  display: block;
+  font-weight: 750;
+  font-size: 15px;
+}
+
 .contact-sub {
   display: block;
   margin-top: 5px;
@@ -105,6 +155,7 @@ a.contact:hover, button.contact:hover { border-color: #ed9a9d; }
   font-size: 12px;
   overflow-wrap: anywhere;
 }
+
 .status {
   display: inline-flex;
   align-items: center;
@@ -113,249 +164,660 @@ a.contact:hover, button.contact:hover { border-color: #ed9a9d; }
   font-size: 12px;
   font-weight: 700;
 }
-.dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
-.online { color: var(--green); }
-.busy { color: var(--amber); }
-.unavailable { color: var(--gray); }
-hr { border: 0; border-top: 1px solid #dedfe3; margin: 25px 0 17px; }
-.chevron { color: #858b94; font-size: 26px; }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.online {
+  color: var(--green);
+}
+
+.busy {
+  color: var(--amber);
+}
+
+.unavailable {
+  color: var(--gray);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #dedfe3;
+  margin: 25px 0 17px;
+}
+
+.chevron {
+  color: #858b94;
+  font-size: 26px;
+}
+
 .wifi-icon {
-  width: 44px; height: 44px; flex: 0 0 44px;
-  display: grid; place-items: center;
-  color: var(--red); background: #fff0f0; border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: grid;
+  place-items: center;
+  color: var(--red);
+  background: #fff0f0;
+  border-radius: 12px;
 }
-.wifi-icon svg { width: 25px; height: 25px; }
-footer { text-align: center; color: #8a8f98; font-size: 12px; margin-top: 25px; }
+
+.wifi-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+footer {
+  text-align: center;
+  color: #8a8f98;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+/* Кнопка настроек скрыта */
 .admin-toggle {
-  display: block; margin: 20px auto 0; padding: 8px;
-  color: #777; border: 0; background: transparent; cursor: pointer;
+  display: none !important;
 }
+
+/* Панель настроек остаётся рабочей */
 .admin-panel {
-  display: none; margin-top: 12px; padding: 17px;
-  background: white; border: 1px solid #e2e4e8; border-radius: 14px;
+  display: none;
+  margin-top: 12px;
+  padding: 17px;
+  background: white;
+  border: 1px solid #e2e4e8;
+  border-radius: 14px;
 }
-.admin-panel.open { display: block; }
-.admin-panel h3 { margin-top: 0; }
-.field { display: grid; gap: 6px; margin: 12px 0; }
-.field label { font-size: 13px; font-weight: bold; }
-.field input, .field select {
-  width: 100%; padding: 11px; border: 1px solid #d4d7dc;
-  border-radius: 8px; font: inherit; background: white;
+
+.admin-panel.open {
+  display: block;
 }
-.actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
-.btn { border: 0; border-radius: 8px; padding: 11px 14px; font-weight: bold; cursor: pointer; }
-.primary { background: var(--red); color: white; }
-.secondary { background: #eee; color: var(--text); }
-.note { color: var(--muted); font-size: 12px; line-height: 1.5; }
+
+.admin-panel h3 {
+  margin-top: 0;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d4d7dc;
+  border-radius: 8px;
+  font: inherit;
+  background: white;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--red);
+  color: white;
+}
+
+.secondary {
+  background: #eee;
+  color: var(--text);
+}
+
+.note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 dialog {
   width: min(420px, calc(100% - 28px));
-  border: 0; border-radius: 16px; padding: 22px;
+  border: 0;
+  border-radius: 16px;
+  padding: 22px;
   box-shadow: 0 20px 70px #0004;
 }
-dialog::backdrop { background: #11182788; }
-dialog h3 { margin-top: 0; }
-dialog p { color: var(--muted); font-size: 14px; line-height: 1.5; }
-.qr { display: none; text-align: center; margin-top: 14px; }
-.qr img { width: 190px; height: 190px; }
+
+dialog::backdrop {
+  background: #11182788;
+}
+
+dialog h3 {
+  margin-top: 0;
+}
+
+dialog p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.qr {
+  display: none;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.qr img {
+  width: 190px;
+  height: 190px;
+}
+
 @media(max-width:390px) {
-  header { padding: 18px 11px; }
-  .brand { gap: 10px; }
-  .logo { width: 51px; height: 51px; }
-  .logo svg { width: 37px; height: 37px; }
-  .brand-name { font-size: 19px; }
-  .branch { font-size: 13px; }
-  .contact { gap: 9px; padding: 12px 10px; }
-  .contact-icon, .wifi-icon { width: 39px; height: 39px; flex-basis: 39px; }
-  .contact-title { font-size: 13px; }
-  .status { font-size: 10px; gap: 4px; }
+  header {
+    padding: 18px 11px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 51px;
+    height: 51px;
+  }
+
+  .logo svg {
+    width: 37px;
+    height: 37px;
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
+
+  .branch {
+    font-size: 13px;
+  }
+
+  .contact {
+    gap: 9px;
+    padding: 12px 10px;
+  }
+
+  .contact-icon,
+  .wifi-icon {
+    width: 39px;
+    height: 39px;
+    flex-basis: 39px;
+  }
+
+  .contact-title {
+    font-size: 13px;
+  }
+
+  .status {
+    font-size: 10px;
+    gap: 4px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="brand">
+
     <div class="logo" aria-hidden="true">
       <svg viewBox="0 0 48 48">
-        <path d="M10 13 H35 V38 M35 13 L10 38"
-          fill="none" stroke="#111" stroke-width="6.5"
-          stroke-linecap="butt" stroke-linejoin="miter"/>
+        <path
+          d="M10 13 H35 V38 M35 13 L10 38"
+          fill="none"
+          stroke="#111"
+          stroke-width="6.5"
+          stroke-linecap="butt"
+          stroke-linejoin="miter"
+        />
       </svg>
     </div>
+
     <div>
       <h1 class="brand-name">Иприс Копицентр</h1>
       <p class="branch">Филиал Пионерская</p>
     </div>
+
   </div>
 </header>
 
 <main>
+
   <section class="intro">
     <h2>Связаться с нами</h2>
     <p>Выберите удобный способ связи</p>
   </section>
 
   <section class="contacts">
-    <a class="contact" id="email1-link" href="mailto:example1@mail.ru">
+
+    <!-- Основная почта -->
+    <a
+      class="contact"
+      id="email1-link"
+      href="mailto:example1@mail.ru"
+    >
       <span class="contact-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
           <rect x="3" y="5" width="18" height="14" rx="2"/>
           <path d="m3 7 9 6 9-6"/>
         </svg>
       </span>
+
       <span class="contact-copy">
         <span class="contact-title">Основная почта</span>
-        <span class="contact-sub" id="email1-text">example1@mail.ru</span>
+        <span
+          class="contact-sub"
+          id="email1-text"
+        >
+          example1@mail.ru
+        </span>
       </span>
-      <span class="status online" id="email1-status"><i class="dot"></i>Онлайн</span>
+
+      <span
+        class="status online"
+        id="email1-status"
+      >
+        <i class="dot"></i>Онлайн
+      </span>
     </a>
 
-    <a class="contact" id="email2-link" href="mailto:example2@mail.ru">
+    <!-- Дополнительная почта -->
+    <a
+      class="contact"
+      id="email2-link"
+      href="mailto:example2@mail.ru"
+    >
       <span class="contact-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
           <rect x="3" y="5" width="18" height="14" rx="2"/>
           <path d="m3 7 9 6 9-6"/>
         </svg>
       </span>
+
       <span class="contact-copy">
         <span class="contact-title">Дополнительная почта</span>
-        <span class="contact-sub" id="email2-text">example2@mail.ru</span>
+        <span
+          class="contact-sub"
+          id="email2-text"
+        >
+          example2@mail.ru
+        </span>
       </span>
-      <span class="status busy" id="email2-status"><i class="dot"></i>Занят</span>
+
+      <span
+        class="status busy"
+        id="email2-status"
+      >
+        <i class="dot"></i>Занят
+      </span>
     </a>
 
-    <a class="contact" id="telegram-link" href="https://t.me/" target="_blank" rel="noopener">
+    <!-- Telegram -->
+    <a
+      class="contact"
+      id="telegram-link"
+      href="https://t.me/"
+      target="_blank"
+      rel="noopener"
+    >
       <span class="contact-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linejoin="round"
+        >
           <path d="m21 3-7.2 18-3.9-7.9L2 9.2 21 3Z"/>
           <path d="M9.9 13.1 21 3"/>
         </svg>
       </span>
+
       <span class="contact-copy">
         <span class="contact-title">Telegram</span>
-        <span class="contact-sub" id="telegram-text">Открыть чат</span>
+        <span
+          class="contact-sub"
+          id="telegram-text"
+        >
+          Открыть чат
+        </span>
       </span>
-      <span class="status online" id="telegram-status"><i class="dot"></i>Онлайн</span>
+
+      <span
+        class="status online"
+        id="telegram-status"
+      >
+        <i class="dot"></i>Онлайн
+      </span>
     </a>
+
   </section>
 
   <hr>
 
-  <button class="contact" id="wifi-open" type="button" style="cursor:pointer">
+  <!-- Wi-Fi -->
+  <button
+    class="contact"
+    id="wifi-open"
+    type="button"
+    style="cursor:pointer"
+  >
+
     <span class="wifi-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      >
         <path d="M2 8.5a15 15 0 0 1 20 0"/>
         <path d="M5 12a10 10 0 0 1 14 0"/>
         <path d="M8.5 15.5a5 5 0 0 1 7 0"/>
         <path d="M12 19h.01"/>
       </svg>
     </span>
+
     <span class="contact-copy">
-      <span class="contact-title">Подключиться к Wi-Fi</span>
-      <span class="contact-sub" id="wifi-sub">Быстрое подключение к сети</span>
+      <span class="contact-title">
+        Подключиться к Wi-Fi
+      </span>
+
+      <span
+        class="contact-sub"
+        id="wifi-sub"
+      >
+        Быстрое подключение к сети
+      </span>
     </span>
+
     <span class="chevron">›</span>
+
   </button>
 
-  <footer>Иприс Копицентр · Филиал Пионерская</footer>
+  <footer>
+    Иприс Копицентр · Филиал Пионерская
+  </footer>
 
-  <button class="admin-toggle" id="admin-toggle" type="button">⚙ Настройки контактов</button>
+  <!--
+    Панель настроек оставлена в коде.
+    Кнопка её открытия скрыта через CSS.
+  -->
+  <button
+    class="admin-toggle"
+    id="admin-toggle"
+    type="button"
+  >
+    ⚙ Настройки контактов
+  </button>
 
-  <section class="admin-panel" id="admin-panel">
+  <section
+    class="admin-panel"
+    id="admin-panel"
+  >
+
     <h3>Настройки визитки</h3>
+
     <div class="field">
-      <label for="email1-input">Основная почта</label>
-      <input id="email1-input" type="email" placeholder="name@example.ru">
-    </div>
-    <div class="field">
-      <label for="email2-input">Дополнительная почта</label>
-      <input id="email2-input" type="email" placeholder="second@example.ru">
-    </div>
-    <div class="field">
-      <label for="telegram-input">Ссылка Telegram</label>
-      <input id="telegram-input" type="url" placeholder="https://t.me/username">
+      <label for="email1-input">
+        Основная почта
+      </label>
+
+      <input
+        id="email1-input"
+        type="email"
+        placeholder="name@example.ru"
+      >
     </div>
 
     <div class="field">
-      <label for="email1-select">Статус основной почты</label>
+      <label for="email2-input">
+        Дополнительная почта
+      </label>
+
+      <input
+        id="email2-input"
+        type="email"
+        placeholder="second@example.ru"
+      >
+    </div>
+
+    <div class="field">
+      <label for="telegram-input">
+        Ссылка Telegram
+      </label>
+
+      <input
+        id="telegram-input"
+        type="url"
+        placeholder="https://t.me/username"
+      >
+    </div>
+
+    <div class="field">
+      <label for="email1-select">
+        Статус основной почты
+      </label>
+
       <select id="email1-select">
         <option value="online">🟢 Онлайн</option>
         <option value="busy">🟡 Занят</option>
         <option value="unavailable">🔴 Недоступен</option>
       </select>
     </div>
+
     <div class="field">
-      <label for="email2-select">Статус дополнительной почты</label>
+      <label for="email2-select">
+        Статус дополнительной почты
+      </label>
+
       <select id="email2-select">
         <option value="online">🟢 Онлайн</option>
         <option value="busy">🟡 Занят</option>
         <option value="unavailable">🔴 Недоступен</option>
       </select>
     </div>
+
     <div class="field">
-      <label for="telegram-select">Статус Telegram</label>
+      <label for="telegram-select">
+        Статус Telegram
+      </label>
+
       <select id="telegram-select">
         <option value="online">🟢 Онлайн</option>
         <option value="busy">🟡 Занят</option>
         <option value="unavailable">🔴 Недоступен</option>
       </select>
     </div>
+
     <div class="field">
-      <label for="wifi-name">Название Wi-Fi сети</label>
-      <input id="wifi-name" placeholder="Название сети">
+      <label for="wifi-name">
+        Название Wi-Fi сети
+      </label>
+
+      <input
+        id="wifi-name"
+        placeholder="Название сети"
+      >
     </div>
+
     <div class="field">
-      <label for="wifi-password">Пароль Wi-Fi</label>
-      <input id="wifi-password" type="text" placeholder="Пароль сети">
+      <label for="wifi-password">
+        Пароль Wi-Fi
+      </label>
+
+      <input
+        id="wifi-password"
+        type="text"
+        placeholder="Пароль сети"
+      >
     </div>
+
     <div class="field">
-      <label for="wifi-security">Защита сети</label>
+      <label for="wifi-security">
+        Защита сети
+      </label>
+
       <select id="wifi-security">
-        <option value="WPA">WPA / WPA2 / WPA3</option>
-        <option value="WEP">WEP</option>
-        <option value="nopass">Без пароля</option>
+        <option value="WPA">
+          WPA / WPA2 / WPA3
+        </option>
+
+        <option value="WEP">
+          WEP
+        </option>
+
+        <option value="nopass">
+          Без пароля
+        </option>
       </select>
     </div>
+
     <div class="actions">
-      <button class="btn primary" id="save" type="button">Сохранить</button>
-      <button class="btn secondary" id="reset" type="button">Сбросить</button>
+
+      <button
+        class="btn primary"
+        id="save"
+        type="button"
+      >
+        Сохранить
+      </button>
+
+      <button
+        class="btn secondary"
+        id="reset"
+        type="button"
+      >
+        Сбросить
+      </button>
+
     </div>
-    <p class="note">Настройки сохраняются только в этом браузере. Чтобы менять статусы для всех посетителей, понадобится серверная админ-панель.</p>
+
+    <p class="note">
+      Настройки сохраняются только в этом браузере.
+      Чтобы менять статусы для всех посетителей,
+      понадобится серверная админ-панель.
+    </p>
+
   </section>
+
 </main>
 
+<!-- Wi-Fi окно -->
 <dialog id="wifi-dialog">
+
   <h3>Подключение к Wi-Fi</h3>
-  <p>Отсканируйте QR-код камерой телефона. Если устройство поддерживает Wi-Fi QR-коды, оно предложит подключиться к сети.</p>
-  <p><b>Сеть:</b> <span id="wifi-display">не настроена</span></p>
-  <div class="qr" id="qr">
-    <img id="qr-img" alt="QR-код Wi-Fi">
+
+  <p>
+    Отсканируйте QR-код камерой телефона.
+    Если устройство поддерживает Wi-Fi QR-коды,
+    оно предложит подключиться к сети.
+  </p>
+
+  <p>
+    <b>Сеть:</b>
+    <span id="wifi-display">не настроена</span>
+  </p>
+
+  <div
+    class="qr"
+    id="qr"
+  >
+    <img
+      id="qr-img"
+      alt="QR-код Wi-Fi"
+    >
   </div>
+
   <div class="actions">
-    <button class="btn primary" id="make-qr" type="button">Показать QR-код</button>
-    <button class="btn secondary" id="close-dialog" type="button">Закрыть</button>
+
+    <button
+      class="btn primary"
+      id="make-qr"
+      type="button"
+    >
+      Показать QR-код
+    </button>
+
+    <button
+      class="btn secondary"
+      id="close-dialog"
+      type="button"
+    >
+      Закрыть
+    </button>
+
   </div>
+
 </dialog>
 
 <script>
+
 const defaults = {
   email1: "example1@mail.ru",
   email2: "example2@mail.ru",
   telegram: "https://t.me/",
+
   email1Status: "online",
   email2Status: "busy",
   telegramStatus: "online",
+
   wifiName: "",
   wifiPassword: "",
   wifiSecurity: "WPA"
 };
+
 const storageKey = "iprisContactSettings";
+
 let data;
 
 try {
-  data = { ...defaults, ...JSON.parse(localStorage.getItem(storageKey) || "{}") };
+
+  data = {
+    ...defaults,
+    ...JSON.parse(
+      localStorage.getItem(storageKey) || "{}"
+    )
+  };
+
 } catch {
-  data = { ...defaults };
+
+  data = {
+    ...defaults
+  };
+
 }
 
 const statusText = {
@@ -365,122 +827,388 @@ const statusText = {
 };
 
 function setStatus(id, value) {
+
   const el = document.getElementById(id);
-  const status = statusText[value] ? value : "unavailable";
+
+  const status =
+    statusText[value]
+      ? value
+      : "unavailable";
+
   el.className = "status " + status;
-  el.innerHTML = '<i class="dot"></i>' + statusText[status];
+
+  el.innerHTML =
+    '<i class="dot"></i>' +
+    statusText[status];
 }
 
 function render() {
-  document.getElementById("email1-link").href = "mailto:" + data.email1;
-  document.getElementById("email2-link").href = "mailto:" + data.email2;
-  document.getElementById("email1-text").textContent = data.email1;
-  document.getElementById("email2-text").textContent = data.email2;
 
-  let telegram = data.telegram || defaults.telegram;
+  document.getElementById("email1-link").href =
+    "mailto:" + data.email1;
+
+  document.getElementById("email2-link").href =
+    "mailto:" + data.email2;
+
+  document.getElementById("email1-text").textContent =
+    data.email1;
+
+  document.getElementById("email2-text").textContent =
+    data.email2;
+
+  let telegram =
+    data.telegram || defaults.telegram;
+
   try {
+
     const url = new URL(telegram);
-    if (!["https:", "http:"].includes(url.protocol) || !url.hostname.endsWith("t.me")) {
+
+    if (
+      !["https:", "http:"].includes(url.protocol) ||
+      !url.hostname.endsWith("t.me")
+    ) {
       telegram = defaults.telegram;
     }
-  } catch { telegram = defaults.telegram; }
 
-  document.getElementById("telegram-link").href = telegram;
+  } catch {
+
+    telegram = defaults.telegram;
+
+  }
+
+  document.getElementById("telegram-link").href =
+    telegram;
+
   document.getElementById("telegram-text").textContent =
-    telegram === defaults.telegram ? "Открыть чат" : telegram.replace(/^https?:\/\//, "");
-  setStatus("email1-status", data.email1Status);
-  setStatus("email2-status", data.email2Status);
-  setStatus("telegram-status", data.telegramStatus);
+    telegram === defaults.telegram
+      ? "Открыть чат"
+      : telegram.replace(/^https?:\/\//, "");
+
+  setStatus(
+    "email1-status",
+    data.email1Status
+  );
+
+  setStatus(
+    "email2-status",
+    data.email2Status
+  );
+
+  setStatus(
+    "telegram-status",
+    data.telegramStatus
+  );
+
   document.getElementById("wifi-sub").textContent =
-    data.wifiName ? "Сеть: " + data.wifiName : "Быстрое подключение к сети";
+    data.wifiName
+      ? "Сеть: " + data.wifiName
+      : "Быстрое подключение к сети";
+
   fillForm();
 }
 
 function fillForm() {
-  document.getElementById("email1-input").value = data.email1 === defaults.email1 ? "" : data.email1;
-  document.getElementById("email2-input").value = data.email2 === defaults.email2 ? "" : data.email2;
-  document.getElementById("telegram-input").value = data.telegram === defaults.telegram ? "" : data.telegram;
-  document.getElementById("email1-select").value = data.email1Status;
-  document.getElementById("email2-select").value = data.email2Status;
-  document.getElementById("telegram-select").value = data.telegramStatus;
-  document.getElementById("wifi-name").value = data.wifiName;
-  document.getElementById("wifi-password").value = data.wifiPassword;
-  document.getElementById("wifi-security").value = data.wifiSecurity;
+
+  document.getElementById("email1-input").value =
+    data.email1 === defaults.email1
+      ? ""
+      : data.email1;
+
+  document.getElementById("email2-input").value =
+    data.email2 === defaults.email2
+      ? ""
+      : data.email2;
+
+  document.getElementById("telegram-input").value =
+    data.telegram === defaults.telegram
+      ? ""
+      : data.telegram;
+
+  document.getElementById("email1-select").value =
+    data.email1Status;
+
+  document.getElementById("email2-select").value =
+    data.email2Status;
+
+  document.getElementById("telegram-select").value =
+    data.telegramStatus;
+
+  document.getElementById("wifi-name").value =
+    data.wifiName;
+
+  document.getElementById("wifi-password").value =
+    data.wifiPassword;
+
+  document.getElementById("wifi-security").value =
+    data.wifiSecurity;
 }
 
-document.getElementById("admin-toggle").addEventListener("click", () => {
-  document.getElementById("admin-panel").classList.toggle("open");
-});
 
-document.getElementById("save").addEventListener("click", () => {
-  const email1 = document.getElementById("email1-input").value.trim() || defaults.email1;
-  const email2 = document.getElementById("email2-input").value.trim() || defaults.email2;
-  const telegram = document.getElementById("telegram-input").value.trim() || defaults.telegram;
+/*
+  Кнопка настроек скрыта визуально,
+  но функциональность оставлена.
+*/
 
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email1) || !emailPattern.test(email2)) {
-    alert("Проверь адреса электронной почты.");
-    return;
-  }
-  if (telegram !== defaults.telegram) {
-    try {
-      const url = new URL(telegram);
-      if (url.protocol !== "https:" || !url.hostname.endsWith("t.me")) throw new Error();
-    } catch {
-      alert("Укажи Telegram-ссылку в формате https://t.me/username");
+document
+  .getElementById("admin-toggle")
+  .addEventListener("click", () => {
+
+    document
+      .getElementById("admin-panel")
+      .classList.toggle("open");
+
+  });
+
+
+/*
+  Сохранение настроек
+*/
+
+document
+  .getElementById("save")
+  .addEventListener("click", () => {
+
+    const email1 =
+      document
+        .getElementById("email1-input")
+        .value
+        .trim()
+      || defaults.email1;
+
+    const email2 =
+      document
+        .getElementById("email2-input")
+        .value
+        .trim()
+      || defaults.email2;
+
+    const telegram =
+      document
+        .getElementById("telegram-input")
+        .value
+        .trim()
+      || defaults.telegram;
+
+    const emailPattern =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (
+      !emailPattern.test(email1) ||
+      !emailPattern.test(email2)
+    ) {
+
+      alert(
+        "Проверь адреса электронной почты."
+      );
+
       return;
     }
-  }
 
-  data = {
-    email1, email2, telegram,
-    email1Status: document.getElementById("email1-select").value,
-    email2Status: document.getElementById("email2-select").value,
-    telegramStatus: document.getElementById("telegram-select").value,
-    wifiName: document.getElementById("wifi-name").value.trim(),
-    wifiPassword: document.getElementById("wifi-password").value,
-    wifiSecurity: document.getElementById("wifi-security").value
-  };
+    if (telegram !== defaults.telegram) {
 
-  try { localStorage.setItem(storageKey, JSON.stringify(data)); }
-  catch {}
-  render();
-  alert("Настройки сохранены в этом браузере.");
-});
+      try {
 
-document.getElementById("reset").addEventListener("click", () => {
-  if (!confirm("Сбросить настройки?")) return;
-  data = { ...defaults };
-  try { localStorage.removeItem(storageKey); } catch {}
-  render();
-});
+        const url = new URL(telegram);
 
-const dialog = document.getElementById("wifi-dialog");
-document.getElementById("wifi-open").addEventListener("click", () => {
-  document.getElementById("wifi-display").textContent = data.wifiName || "не настроена";
-  document.getElementById("qr").style.display = "none";
-  dialog.showModal();
-});
+        if (
+          url.protocol !== "https:" ||
+          !url.hostname.endsWith("t.me")
+        ) {
+          throw new Error();
+        }
 
-document.getElementById("make-qr").addEventListener("click", () => {
-  if (!data.wifiName) {
-    alert("Сначала укажи название Wi-Fi в настройках контактов.");
-    return;
-  }
-  if (data.wifiSecurity !== "nopass" && !data.wifiPassword) {
-    alert("Укажи пароль Wi-Fi.");
-    return;
-  }
+      } catch {
 
-  const esc = value => String(value).replace(/([\\;,":])/g, "\\$1");
-  const payload = `WIFI:T:${data.wifiSecurity};S:${esc(data.wifiName)};P:${esc(data.wifiPassword)};;`;
-  document.getElementById("qr-img").src =
-    "https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=" + encodeURIComponent(payload);
-  document.getElementById("qr").style.display = "block";
-});
+        alert(
+          "Укажи Telegram-ссылку в формате https://t.me/username"
+        );
 
-document.getElementById("close-dialog").addEventListener("click", () => dialog.close());
+        return;
+      }
+    }
+
+    data = {
+
+      email1,
+      email2,
+      telegram,
+
+      email1Status:
+        document
+          .getElementById("email1-select")
+          .value,
+
+      email2Status:
+        document
+          .getElementById("email2-select")
+          .value,
+
+      telegramStatus:
+        document
+          .getElementById("telegram-select")
+          .value,
+
+      wifiName:
+        document
+          .getElementById("wifi-name")
+          .value
+          .trim(),
+
+      wifiPassword:
+        document
+          .getElementById("wifi-password")
+          .value,
+
+      wifiSecurity:
+        document
+          .getElementById("wifi-security")
+          .value
+    };
+
+    try {
+
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify(data)
+      );
+
+    } catch {}
+
+    render();
+
+    alert(
+      "Настройки сохранены в этом браузере."
+    );
+
+  });
+
+
+/*
+  Сброс настроек
+*/
+
+document
+  .getElementById("reset")
+  .addEventListener("click", () => {
+
+    if (!confirm("Сбросить настройки?")) {
+      return;
+    }
+
+    data = {
+      ...defaults
+    };
+
+    try {
+
+      localStorage.removeItem(
+        storageKey
+      );
+
+    } catch {}
+
+    render();
+
+  });
+
+
+/*
+  Wi-Fi
+*/
+
+const dialog =
+  document.getElementById("wifi-dialog");
+
+document
+  .getElementById("wifi-open")
+  .addEventListener("click", () => {
+
+    document
+      .getElementById("wifi-display")
+      .textContent =
+        data.wifiName || "не настроена";
+
+    document
+      .getElementById("qr")
+      .style.display = "none";
+
+    dialog.showModal();
+
+  });
+
+
+/*
+  Создание QR-кода Wi-Fi
+*/
+
+document
+  .getElementById("make-qr")
+  .addEventListener("click", () => {
+
+    if (!data.wifiName) {
+
+      alert(
+        "Сначала укажи название Wi-Fi в настройках контактов."
+      );
+
+      return;
+    }
+
+    if (
+      data.wifiSecurity !== "nopass" &&
+      !data.wifiPassword
+    ) {
+
+      alert(
+        "Укажи пароль Wi-Fi."
+      );
+
+      return;
+    }
+
+    const esc = value =>
+      String(value)
+        .replace(
+          /([\\;,":])/g,
+          "\\$1"
+        );
+
+    const payload =
+      `WIFI:T:${data.wifiSecurity};S:${esc(data.wifiName)};P:${esc(data.wifiPassword)};;`;
+
+    document
+      .getElementById("qr-img")
+      .src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=" +
+        encodeURIComponent(payload);
+
+    document
+      .getElementById("qr")
+      .style.display = "block";
+
+  });
+
+
+/*
+  Закрытие Wi-Fi окна
+*/
+
+document
+  .getElementById("close-dialog")
+  .addEventListener("click", () => {
+
+    dialog.close();
+
+  });
+
+
+/*
+  Первоначальная отрисовка
+*/
+
 render();
+
 </script>
+
 </body>
 </html>
